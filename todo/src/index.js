@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -12,10 +12,13 @@ import { Header } from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-	<div>
+	<StrictMode> 
+	{/* Это инструмент для обнаружения потенциальных проблем в вашем приложении
+	он не рэндерит ничего*/}
+	{/* Помогает обнаружить устаревшие конструкции */}
 		<App/>
-	    <Header/>
-	</div>
+		<Header/>
+	</StrictMode>
 );
 
 /* Компоненты - это блоки пользовательского интерфейса, которые могут иметь свое собственное 
